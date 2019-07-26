@@ -1,11 +1,14 @@
+/* GENERAL CSS */
+
 :root {
     --main-bg-color: #f2f2f2; 
     --main-text-color: #171717;
     --main-higlight: #9400d3;
-    --aboutme-background: #ececec;
+    --grey-background: #ececec;
+    --foter-text: #919191;
+    --yellow: #fc0;
   }
   
-
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -27,7 +30,14 @@ body {
     align-items: right; */
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+.highlight {
+    color: var(--main-higlight);
+}
 
 .container {
     margin: auto;
@@ -35,6 +45,29 @@ body {
     padding: 2em;
 }
 
+.fixed {
+    position: fixed;
+}
+
+
+
+.section {
+    margin-bottom: 4em;
+}
+
+
+h1 {
+    padding: 2em 0 0 0;
+    font-size: 3em;
+}
+
+h2{
+    line-height: 1.4em;
+    font-size: 2.2em;
+    margin-top: 0.3em;
+}
+
+/* NAVIGATION */
 
 .navbar {
     opacity: 0.9;
@@ -43,7 +76,8 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 2em;
-    /* width: 100%; */
+    width: inherit;
+    height: auto;
 }
 
 .navbar ul {
@@ -55,7 +89,7 @@ body {
     padding-left: 2.9em;
 }
 
-/* ********* */
+/* NAV HOVER EFFECT */
 
 a.left {
     position: relative;
@@ -81,7 +115,6 @@ a.left:hover:before {
     width: 100%;
   }
 
-  /* ********* */
 
 
 
@@ -90,27 +123,18 @@ a.left:hover:before {
     height: 5em;
 }
 
-.section {
-    margin-bottom: 4em;
-}
 
-
-h1 {
-    padding: 2em 0 0 0;
-    font-size: 3em;
-}
-
-h2{
-    line-height: 1.4em;
-    font-size: 2.2em;
-    margin-top: 0.3em;
-}
+/* INTRO SECTION */
 
 .list_links {
   list-style: none;  
   list-style-position: inside;
   padding-left: 0;
 }
+
+.list_links li {
+    margin-bottom: 0.8em;
+  }
 
 .grid_container {
     display: grid;
@@ -123,6 +147,8 @@ h2{
     font-weight: 800;
 }
 
+
+
 .intro_part1{
     padding-top: 1em;
 }
@@ -132,9 +158,64 @@ h2{
 }
 
 
+/* text effect in intro section */
+
+.text_higlight, .text_higlight:focus{
+    background-color: transparent;
+    border-color: transparent;
+    position: relative; display: inline-block;
+    padding:0!important; z-index: 3; color: black;
+    border-bottom: .08em solid var(--main-higlight);  
+    text-decoration: none;
+}
+.text_higlight:hover{
+    color: black; text-decoration: none; 
+    background-color: transparent;
+    border-color: transparent;
+}
+.text_higlight::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -4px;
+    width: 100%; 
+    height: 100%;
+    color: inherit; 
+    transition: background-size 0.25s ease-in;
+    background-image: linear-gradient(90deg, var(--yellow) 0%, var(--yellow) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 0.0em;
+    background-position: 0 100%;
+    transition: .3s;
+    z-index: -1;
+}
+.text_higlight:hover::before{
+    background-size: 100% 100%;
+    border-color: var(--yellow);
+    color: black;
+    z-index: -1;
+}
+
+
+
+
+
+/* ABOUT ME SECTION */
+
 .aboutme_section {
     padding: 6em 0;
-    background-color: var(--aboutme-background);  
+    background-color: var(--grey-background);  
+}
+
+
+.my_img {
+    border: 1em solid white;
+    border-radius: 0.5em;
+}
+
+.subtitle {
+    font-size: 0.8em;
 }
 
 .aboutme_list{
@@ -153,6 +234,33 @@ h2{
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 4em;
 }
+
+/* SLIDER */
+
+.flex_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider {
+    margin-top: 8em;
+    width: 800px;
+    height: 500px;
+    background-color: var(--main-higlight);
+}
+
+
+footer {
+    width: 100%;
+    background-color: var(--grey-background);
+}
+
+footer h4 {
+    margin: 4em;
+    color: var(--foter-text);
+}
+
 
 @media (max-width: 768px) {
     .container {
