@@ -33,6 +33,7 @@ body {
 a {
     text-decoration: none;
     color: inherit;
+    cursor: pointer;
 }
 
 .highlight {
@@ -251,6 +252,12 @@ a.left:hover:before {
 }
 
 
+/* CONTACT */
+.contact1 {
+
+}
+
+
 footer {
     width: 100%;
     background-color: var(--grey-background);
@@ -295,8 +302,8 @@ footer h4 {
         font-size: 3em;
     }
 
-    .aboutme_img{
-        margin: 0 auto;
+    .list_links li {
+        font-size: 1.6em;
     }
 
     .grid_container3 {
@@ -305,5 +312,10 @@ footer h4 {
 
     .aboutme_list{
         margin-bottom: 3em;
+    }
+
+    .my_img{
+        width: 90%;
+        margin: 0 auto;
     }
 }
