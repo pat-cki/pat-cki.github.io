@@ -12,12 +12,15 @@
 * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    padding: 0;
+    margin: 0;
+
   }
   
   *, *::before, *::after {
     box-sizing: border-box;
   }
-  
+
 
 body {
     background-color: var(--main-bg-color);
@@ -46,11 +49,6 @@ a {
     padding: 2em;
 }
 
-.fixed {
-    position: fixed;
-}
-
-
 
 .section {
     margin-bottom: 4em;
@@ -64,8 +62,9 @@ h1 {
 
 h2{
     line-height: 1.4em;
-    font-size: 2.2em;
+    font-size: 2.1em;
     margin-top: 0.3em;
+    margin-bottom: 0.3em;
 }
 
 /* NAVIGATION */
@@ -73,22 +72,26 @@ h2{
 .navbar {
     opacity: 0.9;
     border-bottom: 1px solid rgb(181, 181, 181);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    
     padding-bottom: 2em;
     width: inherit;
     height: auto;
 }
 
 .navbar ul {
-    display: flex;
-    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-items: center;
+    list-style: none;    
 }
 
-.navbar ul li:not(:first-child){
+/* .navabr ul li{
+    text-align: center;
+} */
+
+/* .navbar ul li:not(:first-child){
     padding-left: 2.9em;
-}
+} */
 
 /* NAV HOVER EFFECT */
 
@@ -131,6 +134,7 @@ a.left:hover:before {
   list-style: none;  
   list-style-position: inside;
   padding-left: 0;
+  margin-top: 1.5em;
 }
 
 .list_links li {
@@ -270,6 +274,18 @@ footer h4 {
 
 
 @media (max-width: 768px) {
+
+    .navbar ul{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2em;
+        justify-items: left;
+
+    }
+
+    .navbar ul li {
+        font-size: 1.2em;
+    }
+
     .container {
         padding: 1em;
     }
