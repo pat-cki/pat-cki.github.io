@@ -9,28 +9,21 @@
     --yellow: #fc0;
   }
   
-* {
+  *, *::before, *::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 0;
     margin: 0;
-
-  }
-  
-  *, *::before, *::after {
     box-sizing: border-box;
-  }
 
-
+}
+  
 body {
     background-color: var(--main-bg-color);
     font-family: Roboto Mono, sans-serif;
     color:var(--main-text-color);
     margin: 0;
     padding: 0;
-    /* display: flex;
-    justify-content: center;
-    align-items: right; */
 }
 
 a {
@@ -85,13 +78,7 @@ h2{
     list-style: none;    
 }
 
-/* .navabr ul li{
-    text-align: center;
-} */
 
-/* .navbar ul li:not(:first-child){
-    padding-left: 2.9em;
-} */
 
 /* NAV HOVER EFFECT */
 
@@ -130,6 +117,7 @@ a.left:hover:before {
 
 /* INTRO SECTION */
 
+
 .list_links {
   list-style: none;  
   list-style-position: inside;
@@ -152,9 +140,20 @@ a.left:hover:before {
     font-weight: 800;
 }
 
+.intro {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(25px);
+    transition: all 0.5s ease-in-out;
+}
 
+.intro_displayed {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(0px);
+}
 
-.intro_part1{
+.intro_part1 {
     padding-top: 1em;
 }
 
@@ -163,13 +162,17 @@ a.left:hover:before {
 }
 
 
-/* text effect in intro section */
+
+/* hover text effect in intro section */
 
 .text_higlight, .text_higlight:focus{
     background-color: transparent;
     border-color: transparent;
-    position: relative; display: inline-block;
-    padding:0!important; z-index: 3; color: black;
+    position: relative; 
+    display: inline-block;
+    padding:0!important; 
+    z-index: 3; 
+    color: black;
     border-bottom: .08em solid var(--main-higlight);  
     text-decoration: none;
 }
@@ -195,15 +198,12 @@ a.left:hover:before {
     transition: .3s;
     z-index: -1;
 }
-.text_higlight:hover::before{
+.text_higlight:hover::before {
     background-size: 100% 100%;
     border-color: var(--yellow);
     color: black;
     z-index: -1;
 }
-
-
-
 
 
 /* ABOUT ME SECTION */
@@ -215,8 +215,13 @@ a.left:hover:before {
 
 
 .my_img {
-    border: 1em solid white;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
+    opacity: 0.5;
+    transition: 0.5s all ease-in-out;
+}
+
+.my_img:hover {
+    opacity: 1;
 }
 
 .subtitle {
@@ -240,6 +245,39 @@ a.left:hover:before {
     grid-column-gap: 4em;
 }
 
+.aboutme_part2 {
+    position: relative;
+}
+
+
+/* ANIMATION OF THE GRAPHIC ELEMENT */
+
+.graphic_element1 {
+    position: absolute;
+    width: 12em;
+    height: 12em;
+    right: -58px;
+    bottom: -37px;
+    -webkit-animation: element_animation 2.5s infinite; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+    animation: element_animation 2.5s infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-out;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes element_animation {
+    from {top: 0px;}
+    to {top: 40px;}
+}
+  
+  
+@keyframes element_animation {
+    from {top: 0px;}
+    to {top: 40px;}
+}
+
 /* SLIDER */
 
 .flex_container {
@@ -255,12 +293,7 @@ a.left:hover:before {
     background-color: var(--main-higlight);
 }
 
-
-/* CONTACT */
-.contact1 {
-
-}
-
+/* FOOTER */
 
 footer {
     width: 100%;
@@ -273,6 +306,8 @@ footer h4 {
 }
 
 
+/* MEDIA QUERIES */
+
 @media (max-width: 768px) {
 
     .navbar ul{
@@ -284,6 +319,7 @@ footer h4 {
 
     .navbar ul li {
         font-size: 1.2em;
+        margin-top: 0.5em;
     }
 
     .container {
@@ -326,12 +362,31 @@ footer h4 {
         grid-template-columns: 1fr;
     }
 
+    .aboutme_part1 {
+        margin-bottom: 3em;
+    }
+
     .aboutme_list{
         margin-bottom: 3em;
+    }
+
+    .graphic_element1 {
+        width: 9em;
+        height: 9em;
+        right: -5px;
     }
 
     .my_img{
         width: 90%;
         margin: 0 auto;
+        opacity: 1;
+    }
+
+    .text{
+        margin-top: 2em;
+    }
+
+    .contact2{
+        margin-top: 2em;
     }
 }
