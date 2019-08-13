@@ -53,11 +53,29 @@ h1 {
     font-size: 3em;
 }
 
-h2{
+h2 {
     line-height: 1.4em;
     font-size: 2.1em;
     margin-top: 0.3em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.8em;
+    position: relative;
+    z-index: 1;
+}
+
+h2.section_header::before{
+    background-color:var(--yellow);
+    clip-path: polygon(100% 0px, 0% 100%, 100% 100%);
+    width: 60px;
+    height: 60px;
+    left: -35px;
+    content: '';
+    position: absolute;
+    top: -12px;
+    z-index: -1;
+}
+
+h3 {
+    margin-bottom: 1em;
 }
 
 /* NAVIGATION */
@@ -159,9 +177,16 @@ a.left:hover:before {
 
 .paragraph_text{
     line-height: 1.8em;
+    margin-bottom: 0.6em;
+    font-size: 0.9em;
 }
 
-
+.motto {
+    background: black;
+    padding: 0.3em 1em;
+    color: white;
+    display: inline;
+}
 
 /* hover text effect in intro section */
 
@@ -212,7 +237,6 @@ a.left:hover:before {
     padding: 6em 0;
     background-color: var(--grey-background);  
 }
-
 
 .my_img {
     border-radius: 0.3em;
@@ -293,6 +317,7 @@ a.left:hover:before {
     background-color: var(--main-higlight);
 }
 
+
 /* FOOTER */
 
 footer {
@@ -314,7 +339,7 @@ footer h4 {
         grid-template-columns: 1fr 1fr;
         grid-gap: 2em;
         justify-items: left;
-
+        margin-top: 0.8em;
     }
 
     .navbar ul li {
@@ -389,4 +414,13 @@ footer h4 {
     .contact2{
         margin-top: 2em;
     }
+
+    a.left:hover:before {
+        visibility: hidden;
+    }
+
+    .text_higlight:hover {
+        visibility: hidden;
+    }
+    
 }
