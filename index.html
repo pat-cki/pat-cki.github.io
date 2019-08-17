@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <link rel="shortcut icon" type="image" href="imgs/favicon.ico"/>
-
 </head>
 <body>
     <!-- NAVIGATION -->
@@ -23,11 +22,12 @@
                 </ul>
             </div>
     </div>
-
     <!-- INTRO SECTION -->
     <div class="container">
         <section class="section intro">              
                 <h1><i class="fas fa-rocket highlight"></i> Pat Cichocki</h1>
+                <img src="imgs/triangle.svg" alt="triangle" class="intro_image1">
+                <img src="imgs/triangle.svg" alt="triangle" class="intro_image2">
                 <div class="grid_container">
                     <div class="intro_part1">
                         <p class="paragraph_text">
@@ -37,9 +37,9 @@
                             Please check my coding profiles:
                         </p>
                         <ul class="list_links">
-                            <li><a class="highlight" href="https://FreeCodeCamp.com"><i class="fas fa-external-link-alt"></i> FreeCodeCamp</a></li>
-                            <li><a class="highlight" href=""><i class="fas fa-external-link-alt"></i> Codewars</a></li>
-                            <li><a class="highlight" href=""><i class="fas fa-external-link-alt"></i> GitHub</a></li>
+                            <li><a class="highlight" target="_blank" href="https://www.freecodecamp.org/pat-cki"><i class="fas fa-external-link-alt"></i> FreeCodeCamp</a></li>
+                            <li><a class="highlight" target="_blank" href="https://www.codewars.com/users/pat-cki"><i class="fas fa-external-link-alt"></i> Codewars</a></li>
+                            <li><a class="highlight" target="_blank" href="https://github.com/pat-cki"><i class="fas fa-external-link-alt"></i> GitHub</a></li>
                         </ul>
                     </div>
                     <div class="intro_part2">
@@ -52,18 +52,17 @@
                 </div>
         </section>
     </div>
-
     <!-- ABOUT ME SECTION -->
     <section class="section aboutme_section">
         <div class="container">
             <h2 class="section_header"><i class="fas fa-cat highlight"></i> About me</h2>
-            <div class="grid_container">
+            <div class="grid_container_about">
                 <div class="aboutme_part1">
                     <p class="paragraph_text">
                         I am a self-taught graphic designer from Poland. Before I set my foot in the tech industry, I worked on different positions that included working for one of the Polish NGOs, through PR agencies to even manual labour. For the last few years I worked as a graphic designer, first in Warsaw and since 2015 in London. During that time I had the opportunity to participate in a wide range of projects and I have helped many companies by creating high quality designs. Although I really enjoy my work, at some point I started to notice that something was missing. 
                     </p>
                     <p class="paragraph_text">
-                        So far, my creative work, was always about solving some problems with appealing visual form supported by hidden systems or structures. The main objective of creating a new layout, structure or workflow is tochange the world and making a difference in people’s lives - for example, by creating something that helps to save time, I know that I have made a real impact on someone else’s life and it is indeed, a very rewarding experience. However I think that designing process is absolutely incomplete when decoupled from the technology background and by that I mean coding - careful decision making when planning and crafting part - the whole engineering process. That is precisely why I am fascinated by coding - because thanks to that, I am not only giving an idea and a scope, but I am able to set the technical, realistic boundaries of the project. It’s like being an architect, craftsman, and careful builder in one. 
+                        So far, my creative work, was always about solving some problems with appealing visual form supported by hidden systems or structures. The main objective of creating a new layout, structure or workflow is to change the world and making a difference in people’s lives - for example, by creating something that helps to save time, I know that I have made a real impact on someone else’s life and it is indeed, a very rewarding experience. However I think that designing process is absolutely incomplete when decoupled from the technology background and by that I mean coding - careful decision making when planning and crafting part - the whole engineering process. That is precisely why I am fascinated by coding - because thanks to that, I am not only giving an idea and a scope, but I am able to set the technical, realistic boundaries of the project. It’s like being an architect, craftsman, and careful builder in one. 
                     <p class="paragraph_text">
                         I have lived in London since 2015 and I am really proud and happy to call it my home.  This beautiful city never ceases to amaze me, and I love discovering all the faces it has to offer, and looking forward to many more years exploring. As an Eastern European I have  particular feelings towards London’s brutalist landmarks, such as Barbican and Southbank (and the cultural entertainment they provide).
                     </p>
@@ -73,8 +72,6 @@
                     <p class="paragraph_text">
                         I am also a cat dad to a 15 years old mog called Sausage (Paroova in Polish) - some of his pictures are below in the slides, as after all, no words will express his cuteness and the Internet is full of cats anyway!
                     </p>
-                    
-
                 </div>
                 <div class="aboutme_part2">
                     <img class="my_img" src="./imgs/pat.jpg" alt="Pat's photo">
@@ -84,12 +81,12 @@
 
             <div class="grid_container3">
                 <div class="list">
-                    <h3 class="highlight"><i class="far fa-smile-wink"></i> What I enjoy</h3>
+                    <h3 class="highlight"><i class="far fa-smile-beam"></i> What I enjoy</h3>
                     <ul class="aboutme_list">
                         <li>Learning new skills and pushing own boundaries</li>
                         <li>Spending time with people I can learn from</li>
-                        <li>Explaining problems to others</li>
-                        <li>Simplifying things</li>
+                        <li>Explaining problems to others</li> 
+                        <li>Getting a deeper understanding of how and why things work</li>
                     </ul>
                 </div>
                 <div class="list">
@@ -102,22 +99,39 @@
                     </ul>
                 </div>
                 <div class="list">
-                    <h3 class="highlight "><i class="fas fa-eye"></i> Some facts about me</h3>
+                    <h4 class="highlight "><i class="fas fa-user-circle"></i> Some facts about me</h4>
                     <ul class="aboutme_list">
-                        <li>Father to a 15 y/o one-eyed cat</li>
+                        <li>Father to a 15 y/o moggie</li>
                         <li>Avid traveler (mostly to Asia)</li>
                         <li>In love with London</li>
                         <li>Fan of hiking a spending free time in nature</li>
                     </ul>
                 </div>
             </div>
-
-            <div class="flex_container">
-                <div class="slider">
-                    <p>Slider</p>
+            <!-- SLIDER -->
+            <div class="slider">
+                <div class="slider_container">
+                    <h3 class="slider_heading">Meet Sausage - my lovely cat</h3>
+                    <ul>
+                        <li><img class="image display" src="./imgs/img1.jpg" alt=""></li>
+                        <li><img class="image" src="./imgs/img2.jpg" alt=""></li>
+                        <li><img class="image" src="./imgs/img3.jpg" alt=""></li>
+                        <li><img class="image" src="./imgs/img4.jpg" alt=""></li>
+                    </ul>
+                </div>
+                <button class="arrow_button prev_button">&#8249; </button>
+                <button class="arrow_button next_button">&#8250;</button>
+                <div class="control_buttons">
+                    <button class="button play_button"><i class="far fa-play-circle"></i></button>
+                    <button class="button pause_button"><i class="far fa-pause-circle"></i></button>
+                </div>
+                <div class="progress">
+                    <div class="step active"></div>
+                    <div class="step"></div>
+                    <div class="step"></div>
+                    <div class="step"></div>
                 </div>
             </div>
-
         </div>
     </section>
 
@@ -125,42 +139,54 @@
     <div class="container">
         <section class="section journey_section">
             <h2 class="section_header"><i class="far fa-map highlight"></i> My Coding Journey</h2>
-            <p class="paragraph_text">
-                Computers and technology have been present in my life since childhood. I was immensely excited when my parents bought me the first PC. Having an artistic flair I used it initially to vent my creativity by playing around with some graphic software. I still remember my amazement when I managed to generate some simple geometrical shapes by copying and modifying a piece of quite generic code. 
-            </p>
-            <p class="paragraph_text">
-                Since I started working as a designer, I have been always intrigued by the work of fellow developers.  Being able to create something tangible and usable with code that looks completely like a written foreign language, was definitely something that caught my attention in particular and sparked excitement. Inspired by a friend who is asoftware engineer (who also had enormous levels of patience to answer all my questions as I was always curious about new things), I decided to start learning about coding and web technologies.
-            </p>
-            <p class="paragraph_text">
-                My learning experience started at FreeCodeCamp, which helped me to brush up HTML & CSS, which I already knew a bit before, but at the same time I have also learned a lot about different features of them both, plus I have dived into JavaScript, which I must say, was quite intimidating at first, but very intriguing indeed! Tackling Code Wars katas helped me to learn how to think like a developer and boosted my analytical skills - no matter how big and complicated the task is, it can be always broken down into smaller, much more approachable chunks. What I found particularly valuable on CW platform, was an opportunity to go through different solutions after the task submission, which can help you to learn how to optimise and refactor your code better. Finally, building my own website turned out to be the most rewarding until now, as at last, I could use what I have learned so far.
-            </p>
-            <p class="paragraph_text">
-                Coding brings me enormous satisfaction and enjoyment, to the levels unknown to me before. Similarly to design, it is also about finding solutions to problems throughout analytical thinking, and it has a strong transformative value - it not only helps you to change the way you think and approach some problems - but also gives you the ability to change and shape the world around you - it is indeed like being gifted a tool, and the skill of how touse it. I am aware, that learning how to code is not a breeze, and it will be an enormous effort but for the sake of obtaining the tool that will help me to change the world around me, I am absolutely up for that.
-            </p>
+            <div class="grid_container">
+                <div class="left_column">
+                    <p class="paragraph_text">
+                        Computers and technology have been present in my life since childhood. I was immensely excited when my parents bought me the first PC. Having an artistic flair I used it initially to vent my creativity by playing around with some graphic software. I still remember my amazement when I managed to generate some simple geometrical shapes by copying and modifying a piece of quite generic code. 
+                    </p>
+                    <p class="paragraph_text">
+                        Since I started working as a designer, I have been always intrigued by the work of fellow developers.  Being able to create something tangible and usable with code that looks completely like a written foreign language, was definitely something that caught my attention in particular and sparked excitement. At some point I started coding as a hobby. Inspired by a friend who is a software engineer (who also had enormous levels of patience to answer all my questions as I was always curious about new things), I decided to go deeper into coding and web technologies with the aim of turning my sideline activity into a profession.
+                    </p>
+                    <p class="paragraph_text">
+                        My learning experience started at FreeCodeCamp, which helped me to brush up HTML & CSS, which I already knew a bit before, but at the same time I have also learned a lot about different features of them both, plus I have dived into JavaScript, which I must say, was quite intimidating at first, but very intriguing indeed! Tackling Code Wars katas helped me to learn how to think like a developer and boosted my analytical skills - no matter how big and complicated the task is, it can be always broken down into smaller, much more approachable chunks. What I found particularly valuable on CW platform, was an opportunity to go through different solutions after the task submission, which can help you to learn how to optimise and refactor your code better. Finally, building my own website turned out to be the most rewarding until now, as at last, I could use what I have learned so far.
+                    </p>
+                </div>
+                <div class="right_column">
+                    <p class="paragraph_text">
+                        Coding brings me enormous satisfaction and enjoyment, to the levels unknown to me before. Similarly to design, it is also about finding solutions to problems throughout analytical thinking, and it has a strong transformative value - it not only helps you to change the way you think and approach some problems - but also gives you the ability to change and shape the world around you - it is indeed like being gifted a tool, and the skill of how to use it. I am aware, that learning how to code is not a breeze, and it will be an enormous effort but for the sake of obtaining the tool that will help me to change the world around me, I am absolutely up for that.
+                    </p>
+                    <img src="imgs/illustration.svg" alt="laptop illustration">
+                </div>
+            </div>
         </section>
     </div>
-
     <!-- FOUNDERS AND CODERS SECTION  -->
     <div class="container">
         <section class="section fac_section">
             <h2 class="section_header"><i class="fas fa-laptop highlight"></i> Founders & Coders</h2>
-            <h3>Why I absolutely love the idea behind Founders & Coders</h3>
-            <p class="paragraph_text">
-                When I heard about Founders and Coders it instantly sparked my interest. Unlike to most coding bootcamps out there, F&C has a strong mission and is based on a solid moral foundation. 
-            </p>
-            <p class="paragraph_text">
-                As a person who is experienced in working in the NGOs sector, I really love the fact that F&C strives to achieve equality in our society. I strongly believe in the empowering value of education -  coding and technology is thebest example of how to absolutely improve life conditions for people from underprivileged backgrounds. After all, access to technology can contribute not only on the material or status matters on an individual levels, but more importantly, diversity in the design and engineering process is about creating a more inclusive product and reality around us.
-            </p>
-            <p class="paragraph_text">
-                As an experienced designer I love sharing my knowledge and skills and I am glad to see, that F&C community is there to help and mentor the newcomers. I really hope, that one day I would be able to give back what I have learned, by making it as easy as it can be for the new juniors to make their first steps on the coding achievement ladder. Learning with the like minded, open and supportive people and facing together coding challenges is a great experience to have and makes the learning process so much easier. 
-            </p>
-
+            <h3>Why I love the idea behind Founders & Coders</h3>
+            <div class="grid_container">
+                <div class="left_column">
+                    <p class="paragraph_text">
+                        When I heard about Founders and Coders it instantly sparked my interest. Unlike to most coding bootcamps out there, F&C has a strong mission and is based on a solid moral foundation. 
+                    </p>
+                    <p class="paragraph_text">
+                        As a person who is experienced in working in the NGOs sector, I really love the fact that F&C strives to achieve equality in our society. I strongly believe in the empowering value of education -  coding and technology is the best example of how to absolutely improve life conditions for people from underprivileged backgrounds. After all, access to technology can contribute not only on the material or status matters on an individual levels, but more importantly, diversity in the design and engineering process is about creating a more inclusive product and reality around us.
+                    </p>
+                </div>
+                <div class="right_column">
+                    <p class="paragraph_text">
+                        What I love in my work as a designer is sharing my knowledge and skills and I am glad to see, that F&C community is there to help and mentor the newcomers. I really hope, that one day I would be able to give back what I have learned, by making it as easy as it can be for the new juniors to make their first steps on the coding achievement ladder. Learning with the like minded, open and supportive people and facing together coding challenges is a great experience to have and makes the learning process so much easier. 
+                    </p>
+                    <img src="imgs/cubes.svg" alt="cubes" class="cubes">
+                </div>
+            </div>
         </section>
     </div>
-
     <!-- CONTACT SECTIONS -->
     <div class="container">
         <section class="section contact_section">
+           
             <h2 class="section_header"><i class="far fa-paper-plane highlight"></i> Contact</h2>
             <div class="grid_container">
                 <div class="contact1">
@@ -171,22 +197,21 @@
                 </div>
                 <div class="contact2">
                     <h3>My Contact Details:</h3>
-                    <div class="contact_details"><i class="far fa-envelope highlight"></i> pat.cichocki@gmail.com</div>
-                    <div class="contact_details"><i class="fas fa-phone-alt highlight"></i> 0753 784 846</div>
+                    <h3 class="contact_details"><i class="far fa-envelope highlight"></i> pat.cichocki@gmail.com</h3>
+                    <h3 class="contact_details"><i class="fas fa-phone-alt highlight"></i> 0753 784 846</h3>
                 </div>
             </div>
         </section>
     </div>
-
     <!-- FOOTER -->
     <footer>
         <div class="flex_container">
             <h4>Made with <i class="fas fa-mug-hot highlight"></i> by Pat Cichocki</h4>
         </div>
     </footer>
-
     <!-- SCRIPTS -->
-    <script src="scrolling.js"></script>
-    <script src="fadein.js"></script>
+    <script src="./scripts/scrolling.js"></script>
+    <script src="./scripts/fadein.js"></script>
+    <script src="./scripts/slider.js"></script>
 </body>
 </html>
