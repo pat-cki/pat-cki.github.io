@@ -1,5 +1,4 @@
-/* GENERAL CSS */
-
+/* COLOURS */
 :root {
     --main-bg-color: #f2f2f2; 
     --main-text-color: #171717;
@@ -8,14 +7,15 @@
     --foter-text: #919191;
     --yellow: #fc0;
   }
-  
+
+/* GENERAL CSS */  
+
   *, *::before, *::after {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-
 }
   
 body {
@@ -74,7 +74,7 @@ h2.section_header::before{
     left: -35px;
     content: '';
     position: absolute;
-    top: -12px;
+    top: -8px;
     z-index: -1;
 }
 
@@ -84,6 +84,37 @@ h3 {
 
 button {
     outline: none;
+}
+
+.icon_small {
+    width: 24px;
+    height: 24px;
+} 
+
+.icon_link {
+    width: 24px;
+    height: 24px;
+} 
+
+.icon_medium {
+    width: 32px;
+    height: 32px;
+}
+
+.icon_big {
+    width: 48px;
+    height: 48px;
+}
+
+.control_icons {
+    width: 30px;
+    height: 30px;
+}
+
+.paragraph_text{
+    line-height: 1.8em;
+    margin-bottom: 0.6em;
+    font-size: 0.9em;
 }
 
 /* NAVIGATION */
@@ -101,11 +132,15 @@ button {
     list-style: none;    
 }
 
-.paragraph_text{
-    line-height: 1.8em;
-    margin-bottom: 0.6em;
-    font-size: 0.9em;
+.nav_flex{
+    display: flex;
+
 }
+
+li .icon_small {
+    margin-right: 0.7em;
+}
+
 
 /* NAV HOVER EFFECT */
 a.left {
@@ -155,21 +190,29 @@ a.left:hover:before {
     font-weight: 800;
 }
 
-.intro {
-    /* height: 60vh; */
+.intro {   
     position: relative;
-    visibility: hidden;
-    opacity: 0;
-    transform: translateY(25px);
-    transition: all 0.5s ease-in-out;
-    margin-bottom: 6em;
+    opacity: 0; 
+    animation: fadeIn 0.6s ease-in-out 0s forwards;
+    animation-delay: 0.1s;
+    margin-bottom: 7em;
+    
 }
 
-.intro_displayed {
-    visibility: visible;
-    opacity: 1;
-    transform: translate(0px);
+@keyframes fadeIn {
+    from { 
+      opacity: 0;
+      -webkit-transform: translate3d(0, 60%, 0);
+      transform: translate3d(0, 60%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
 }
+
 
 .intro_part1 {
     padding-top: 1em;
@@ -180,7 +223,7 @@ a.left:hover:before {
     width: 200px;
     height: 200px;
     left: -9px; 
-    top: 420px;
+    top: 400px;
     opacity: 0.6;
 }
 
@@ -203,8 +246,7 @@ a.left:hover:before {
 }
 
 /* hover text effect in intro section */
-
-.text_higlight, .text_higlight:focus{
+.text_higlight, .text_higlight:focus {
     background-color: transparent;
     border-color: transparent;
     position: relative; 
@@ -215,12 +257,14 @@ a.left:hover:before {
     border-bottom: .08em solid var(--main-higlight);  
     text-decoration: none;
 }
-.text_higlight:hover{
+
+.text_higlight:hover {
     color: black; text-decoration: none; 
     background-color: transparent;
     border-color: transparent;
 }
-.text_higlight::before{
+
+.text_higlight::before {
     content: '';
     position: absolute;
     left: 0;
@@ -237,6 +281,7 @@ a.left:hover:before {
     transition: .3s;
     z-index: -1;
 }
+
 .text_higlight:hover::before {
     background-size: 100% 100%;
     border-color: var(--yellow);
@@ -246,7 +291,6 @@ a.left:hover:before {
 
 
 /* ABOUT ME SECTION */
-
 .aboutme_section {
     padding: 6em 0;
     background-color: var(--grey-background);  
@@ -274,7 +318,7 @@ a.left:hover:before {
     font-size: 0.8em;
 }
 
-.aboutme_list{
+.aboutme_list {
     list-style: none;
     list-style-position: inside;
     padding-left: 0;
@@ -297,7 +341,6 @@ a.left:hover:before {
 
 
 /* ANIMATION OF THE GRAPHIC ELEMENT */
-
 .graphic_element1 {
     position: absolute;
     width: 12em;
@@ -323,7 +366,6 @@ a.left:hover:before {
 }
 
 /* SLIDER */
-
 .slider {
     margin: 0 auto;
     max-width: 1200px;
@@ -422,12 +464,9 @@ a.left:hover:before {
 
 
 /* FOUNDERS AND CODERS SECTION */
-
-
 .cubes {
     transform: scale(0.6);
 }
-
 
 /* FOOTER */
 footer {
@@ -450,9 +489,7 @@ footer h4 {
     .intro_image1{
         display: none;
     }
-
 }
-
 
 @media (max-width: 768px) {
 
@@ -464,7 +501,7 @@ footer h4 {
     }
 
     .navbar ul li {
-        font-size: 1.2em;
+        font-size: 1em;
         margin-top: 0.5em;
     }
 
@@ -497,10 +534,6 @@ footer h4 {
     .intro_image2 {
         top: -18px;
     }
-
-    h2 {
-        font-size: 1.8em;
-    }
     
     .welcome_message {
         font-size: 3em;
@@ -530,7 +563,6 @@ footer h4 {
     }
 
     .my_img{
-        width: 90%;
         margin: 0 auto;
         opacity: 0.8;
     }
@@ -567,9 +599,29 @@ footer h4 {
     .progress {
         margin-top: 2em;
     }
+
+    .icon_link {
+        width: 48px;
+        height: 48px;
+    }     
+
+    .icon_small {
+        width: 32px;
+        height: 32px;
+    } 
+    
+    
+    .icon_medium {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .icon_big {
+        width: 48px;
+        height: 48px;
+    }
     
 }
-
 
 @media (max-width: 980px) {
 
@@ -578,12 +630,11 @@ footer h4 {
     }
 
     h2 {
-        font-size: 1.7em;
+        font-size: 2em;
     }
 
     .arrow_button {
         position: absolute;
-        top: 35%;
         transform: translateY(-50%);
         font-size: 3em;
         color:  white;

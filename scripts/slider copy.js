@@ -4,24 +4,18 @@ const slides = document.querySelectorAll(".image"),
       prevButton = document.querySelector(".prev_button"),
       nextButton = document.querySelector(".next_button"),
       playButton = document. querySelector(".play_button"),
-      pauseButton = document.querySelector(".pause_button"),
-      progress = document.querySelector(".progress"),
-      rightArrowKey = 39,
-      leftArrowKey = 37,
-      spaceBarKey = 32;  
+      pauseButton = document.querySelector(".pause_button");
+      progress = document.querySelector(".progress");
 
 let counter = 0,
     slidesInterval,
     playing = true;
 
-// UPDATE CURRENT SLIDE
+// UPDATE SLIDE
 function updateSlide(slide) {
-    const displayed =  document.querySelector(".display"),
-          active = document.querySelector(".active");
-
-    displayed.classList.remove("display");
+    document.querySelector(".display").classList.remove("display");
     slides[slide].classList.add("display");
-    active.classList.remove("active");
+    document.querySelector(".active").classList.remove("active");
     steps[slide].classList.add("active");
 }
 
@@ -39,7 +33,9 @@ function showPrev(){
 
 // PLAY AND PAUSE
 function playSlides() {
-    playing = !playing;
+    if(!playing) {
+        playing = true;
+    }
     slidesInterval = setInterval(showNext, 2500);
     playButton.style.opacity = 0.1;
     playButton.disabled = true;
@@ -48,7 +44,9 @@ function playSlides() {
 }
 
 function pauseSlides() {
-    playing = !playing;
+    if(playing) {
+        playing = false;
+    }
     clearInterval(slidesInterval);
     playButton.style.opacity = 1;
     pauseButton.disabled = true;
@@ -57,7 +55,7 @@ function pauseSlides() {
 }
 
 
-// CLICK STEPS TO UPDATE SLIDE (get index of the clicked element)
+// CLICK STEPS TO UPDATE SLIDE
 for (var i = 0, len = progress.children.length; i < len; i++)
 {
     (function(index){
@@ -80,22 +78,22 @@ function prevSlide() {
 }
 
 // KEYBOARD ARROWS AND SPACEBAR NAVIGATION
-// ARROWS:
+// ARROWS
 document.addEventListener("keydown", function(e) {
-    if (e.keyCode == rightArrowKey) {
+    if (e.keyCode == 39) {
         nextSlide();      
     }
-    else if (e.keyCode == leftArrowKey) {
+    else if (e.keyCode == 37) {
         prevSlide();
     }      
 });
 
-// SPACEBAR:
+// SPACEBAR
 document.addEventListener('keydown', function (e) {
-    if ( ( e.keycode || e.which ) == spaceBarKey && playing == true) {
+    if ( ( e.keycode || e.which ) == 32 && playing == true) {
         e.preventDefault();
         pauseSlides();
-    } else if ( ( e.keycode || e.which ) == spaceBarKey && playing == false) {
+    } else if ( ( e.keycode || e.which ) == 32 && playing == false) {
         e.preventDefault();
         playSlides();
     }
