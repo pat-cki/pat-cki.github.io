@@ -21,6 +21,7 @@ function updateSlide(slide) {
 
     displayed.classList.remove("display");
     slides[slide].classList.add("display");
+    
     active.classList.remove("active");
     steps[slide].classList.add("active");
 }

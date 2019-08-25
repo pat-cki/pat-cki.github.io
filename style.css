@@ -89,14 +89,22 @@ button {
 .icon_small {
     width: 24px;
     height: 24px;
+    margin-right: 0.6em;
 } 
 
 .icon_link {
     width: 24px;
     height: 24px;
+    margin-right: 0.6em;
 } 
 
 .icon_medium {
+    width: 32px;
+    height: 32px;
+    margin-right: 0.8em;
+}
+
+.icon_footer {
     width: 32px;
     height: 32px;
 }
@@ -104,6 +112,7 @@ button {
 .icon_big {
     width: 48px;
     height: 48px;
+    margin-right: 0.3em;
 }
 
 .control_icons {
@@ -132,15 +141,10 @@ button {
     list-style: none;    
 }
 
-.nav_flex{
-    display: flex;
+.flex{
+    display: flex; 
 
 }
-
-li .icon_small {
-    margin-right: 0.7em;
-}
-
 
 /* NAV HOVER EFFECT */
 a.left {
@@ -620,6 +624,7 @@ footer h4 {
         width: 48px;
         height: 48px;
     }
+
     
 }
 
@@ -645,7 +650,6 @@ footer h4 {
         width: 7em;
         height: 7em;
         right: -12px;        
-
     }
 
 }
