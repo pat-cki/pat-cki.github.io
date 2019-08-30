@@ -254,10 +254,18 @@ a.left:hover:before {
 }
 
 .motto {
-    background: black;
+    background: var(--main-higlight);
     padding: 0.3em 1em;
     color: white;
     display: inline;
+}
+
+.instruction {
+    font-size: 0.7em;
+}
+
+.change_colour {
+    margin-top: 2em;
 }
 
 /* hover text effect in intro section */
@@ -358,9 +366,9 @@ a.left:hover:before {
 /* ANIMATION OF THE GRAPHIC ELEMENT */
 .graphic_element1 {
     position: absolute;
-    width: 12em;
-    height: 12em;
-    right: -130px;
+    width: 9em;
+    height: 9em;
+    right: -73px;
     bottom: -37px;
     -webkit-animation: element_animation 2.5s infinite; /* Safari 4.0 - 8.0 */
     -webkit-animation-direction: alternate;
