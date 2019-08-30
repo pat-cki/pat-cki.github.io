@@ -3,60 +3,63 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 625 177" style="enable-background:new 0 0 625 177;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#F4EBC9;}
-	.st1{fill:#9400D3;}
-	.st2{fill:#F7B600;}
+	.st0{opacity:0.4;}
+	.st1{fill:#F4EBC9;}
+	.st2{fill:#9400D3;}
+	.st3{fill:#F7B600;}
+	.st4{opacity:0.6;}
+	.st5{opacity:0.8;}
 </style>
+<g class="st0">
+	<polygon class="st1" points="455.2,25.4 527,25.3 559.6,85.7 487.2,86.2 	"/>
+</g>
+<g class="st0">
+	<g>
+		<polygon class="st2" points="487.7,86.3 560.1,86.2 519.2,148.1 447.8,148.3 		"/>
+	</g>
+</g>
+<g class="st0">
+	<g>
+		<polygon class="st3" points="455.3,25 416.4,87.5 448.3,148 488,87 		"/>
+	</g>
+</g>
+<g class="st4">
+	<polygon class="st1" points="331.2,25.4 403,25.3 435.6,85.7 363.2,86.2 	"/>
+</g>
+<g class="st4">
+	<g>
+		<polygon class="st2" points="363.7,86.3 436.1,86.2 395.2,148.1 323.8,148.3 		"/>
+	</g>
+</g>
+<g class="st4">
+	<g>
+		<polygon class="st3" points="331.3,25 292.4,87.5 324.3,148 364,87 		"/>
+	</g>
+</g>
+<g class="st5">
+	<polygon class="st1" points="207.2,25.4 279,25.3 311.6,85.7 239.2,86.2 	"/>
+</g>
+<g class="st5">
+	<g>
+		<polygon class="st2" points="239.7,86.3 312.1,86.2 271.2,148.1 199.8,148.3 		"/>
+	</g>
+</g>
+<g class="st5">
+	<g>
+		<polygon class="st3" points="207.3,25 168.4,87.5 200.3,148 240,87 		"/>
+	</g>
+</g>
 <g>
-	<polygon class="st0" points="485.2,25.4 557,25.3 589.6,85.7 517.2,86.2 	"/>
+	<polygon class="st1" points="83.2,25.4 155,25.3 187.6,85.7 115.2,86.2 	"/>
 </g>
 <g>
 	<g>
-		<polygon class="st1" points="517.7,86.3 590.1,86.2 549.2,148.1 477.8,148.3 		"/>
+		<polygon class="st2" points="115.7,86.3 188.1,86.2 147.2,148.1 75.8,148.3 		"/>
 	</g>
 </g>
 <g>
 	<g>
-		<polygon class="st2" points="485.3,25 446.4,87.5 478.3,148 518,87 		"/>
-	</g>
-</g>
-<g>
-	<polygon class="st0" points="351.2,25.4 423,25.3 455.6,85.7 383.2,86.2 	"/>
-</g>
-<g>
-	<g>
-		<polygon class="st1" points="383.7,86.3 456.1,86.2 415.2,148.1 343.8,148.3 		"/>
-	</g>
-</g>
-<g>
-	<g>
-		<polygon class="st2" points="351.3,25 312.4,87.5 344.3,148 384,87 		"/>
-	</g>
-</g>
-<g>
-	<polygon class="st0" points="217.2,25.4 289,25.3 321.6,85.7 249.2,86.2 	"/>
-</g>
-<g>
-	<g>
-		<polygon class="st1" points="249.7,86.3 322.1,86.2 281.2,148.1 209.8,148.3 		"/>
-	</g>
-</g>
-<g>
-	<g>
-		<polygon class="st2" points="217.3,25 178.4,87.5 210.3,148 250,87 		"/>
-	</g>
-</g>
-<g>
-	<polygon class="st0" points="83.2,25.4 155,25.3 187.6,85.7 115.2,86.2 	"/>
-</g>
-<g>
-	<g>
-		<polygon class="st1" points="115.7,86.3 188.1,86.2 147.2,148.1 75.8,148.3 		"/>
-	</g>
-</g>
-<g>
-	<g>
-		<polygon class="st2" points="83.3,25 44.4,87.5 76.3,148 116,87 		"/>
+		<polygon class="st3" points="83.3,25 44.4,87.5 76.3,148 116,87 		"/>
 	</g>
 </g>
 </svg>

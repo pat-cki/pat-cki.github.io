@@ -115,15 +115,16 @@ button {
     margin-right: 0.3em;
 }
 
-.control_icons {
-    width: 30px;
-    height: 30px;
-}
 
 .paragraph_text{
     line-height: 1.8em;
     margin-bottom: 0.6em;
     font-size: 0.9em;
+}
+
+.flex{
+    display: flex; 
+
 }
 
 /* NAVIGATION */
@@ -141,10 +142,6 @@ button {
     list-style: none;    
 }
 
-.flex{
-    display: flex; 
-
-}
 
 /* NAV HOVER EFFECT */
 a.left {
@@ -204,6 +201,20 @@ a.left:hover:before {
 }
 
 @keyframes fadeIn {
+    from { 
+      opacity: 0;
+      -webkit-transform: translate3d(0, 60%, 0);
+      transform: translate3d(0, 60%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: none;
+      transform: none;
+    }
+}
+
+@-webkit-keyframes fadeIn {
     from { 
       opacity: 0;
       -webkit-transform: translate3d(0, 60%, 0);
