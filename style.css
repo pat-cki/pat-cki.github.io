@@ -1,9 +1,9 @@
 /* COLOURS */
 :root {
-    --main-bg-color: #f2f2f2; 
+    --main-bg-color: white; 
     --main-text-color: #171717;
     --main-higlight: #9400d3;
-    --grey-background: #ececec;
+    --grey-background: white;
     --foter-text: #919191;
     --yellow: #fc0;
   }
